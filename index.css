@@ -103,6 +103,7 @@ a:hover {
   cursor: pointer;
 }
 .logo-wrap img{
+  display: block;
   width: 13.82vw;
   height: 2.53vw;
   object-fit: cover;
@@ -521,38 +522,129 @@ body.nav-active .nav__list-item:nth-child(10) {
 /* Brand */
 .brand-container{
   margin: 20vh 0;
-  height: 200vh;
+  height: 120.071vw;
   position: relative;
-  background-color: #E61E2B;
+  /* background-color: #E61E2B; */
+  width: 100vw;
 }
-.brand-wrapper{
+.brand-container .brand-wrapper-1{
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.brand-container .brand-wrapper-1 img{
+  width: 30.232vw;
+  height: 48.485vw;
+  object-fit: cover;
+  position: absolute;
+  right: 1.8vw;
+  top: 3%;
+}
+.brand-container .brand-wrapper-1 .brand-inner-txt{
+  margin-top: 3.5vw;
+  position: absolute;
+  left: 9.8vw;
+  top: 3%;
+}
+.brand-container .brand-wrapper-1 .brand-inner-txt ul{
   display: flex;
+  align-items: center;
 }
-.brand-wrapper img{
-  width: 25.21vw;
-  height: 48.48vw;
+.brand-container .brand-wrapper-1 .brand-inner-txt ul li{
+  margin: 0 0.3vw;
+}
+.brand-container .brand-wrapper-1 .brand-inner-txt ul li img{
+  width: 4.535vw;
+  height: 4.535vw;
   object-fit: cover;
 }
-.brand-wrapper ul li:first-child img{
-  width: 4vw;
-  height: 4.2vw;
-  object-fit: cover;
-  margin: 0 0.5vw;
-}
-.brand-wrapper ul li:first-child{
-  display: flex;
-}
-.brand-wrapper ul li:first-child h3{
+.brand-container .brand-wrapper-1 .brand-inner-txt ul li:first-child{
+  font-size: 4.040vw;
+  color: #2B2B2B;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 4.04vw;
   font-weight: bold;
+}
+.brand-container .brand-wrapper-1 .brand-inner-txt ul li:nth-child(3){
+  font-size: 4.040vw;
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke: 0.20vw #2B2B2B;
+}
+.brand-container .brand-wrapper-1 .brand-inner-txt span{
+  background-color: #00A84E;
+  font-size: 4.040vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 1.85vw;
+  padding: 0.3vw;
+  display: block;
+}
+#drink{
+  width: 14.131vw;
+}
+#culture{
+  width: 20.192vw;
+  margin-bottom: 4vw;
+}
+.brand-container .brand-wrapper-1 .brand-inner-txt a{
+  border: 1px solid #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.2vw;
+  color: #000;
+  padding: 0.5vw 2vw;
+  border-radius: 5vw;
+}
+.brand-container .brand-wrapper-2{
+  white-space:nowrap;
+  position: absolute;
+  bottom: 3%;
+}
+.brand-container .brand-wrapper-2 ul li{
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 6.061vw;
+  border-top: 0.051vw solid #000;
+}
+.brand-container .brand-wrapper-2 ul li:last-child{
+  border-bottom: 0.051vw solid #000;
+}
+.brand-container .brand-wrapper-2 ul li p{
+  margin: 0 3.313vw;
+  left: 500px;
+  animation: scrollText 10s linear infinite;
+}
+.brand-container .brand-wrapper-2 ul li p:first-child{
+  margin: 0;
+}
+.brand-container .brand-wrapper-2 ul li:nth-child(odd){
   color: #2B2B2B;
 }
-.brand-wrapper ul li:first-child span{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 4.04vw;
-  font-weight: bold;
-  font-style: italic;
+.brand-container .brand-wrapper-2 ul li:nth-child(even){
   color: transparent;
   -webkit-text-stroke: 0.20vw #2B2B2B;
+}
+.move-text{
+  transform: translateX(10%);
+}
+.active{
+  background-color: #E61E2B;
+  transition: 0.2s;
+}
+#changed-image{
+  display: none;
+  width: 13.82vw;
+  height: 2.53vw;
+  object-fit: cover;
+}
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
