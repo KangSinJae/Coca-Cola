@@ -73,6 +73,7 @@ window.addEventListener('scroll', scrollInProgress)
 // 스크롤 이벤트를 사용하여 클래스 토글 기능 구현
 document.addEventListener('DOMContentLoaded', function() {
   const scrollArea = document.querySelector('.brand-container');
+  const scrollArea2 = document.querySelector('.create-container');
 	const originalImage = document.getElementById('original-image');
   const changedImage = document.getElementById('changed-image');
 
@@ -80,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 스크롤 영역의 위치와 높이 계산
     const scrollAreaTop = scrollArea.offsetTop;
     const scrollAreaHeight = scrollArea.offsetHeight;
+    const scrollAreaTop2 = scrollArea2.offsetTop;
+    const scrollAreaHeight2 = scrollArea2.offsetHeight;
 
     // 현재 스크롤 위치 계산
     const scrollPosition = window.scrollY;
@@ -94,9 +97,23 @@ document.addEventListener('DOMContentLoaded', function() {
 			originalImage.style.display = 'block';
       changedImage.style.display = 'none';
     }
+    if (scrollPosition >= scrollAreaTop2 && scrollPosition < scrollAreaTop2 + scrollAreaHeight2) {
+      scrollArea2.classList.add('active2');
+    } else {
+      scrollArea2.classList.remove('active2');
+    }
   }
 
   // 스크롤 이벤트를 등록하여 스크롤 시 handleScroll 함수 호출
   window.addEventListener('scroll', handleScroll);
 });
 
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
