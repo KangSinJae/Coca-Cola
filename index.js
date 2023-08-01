@@ -108,12 +108,16 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', handleScroll);
 });
 
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  // freeMode: true,
   spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+
 });
+
+
+
+
+
+
+
