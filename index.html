@@ -53,10 +53,10 @@
 	<div class="nav">
 		<div class="nav__content">
 			<ul class="nav__list">
-				<li class="nav__list-item active-nav"><a href="#" class="hover-target">HOME</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">BRAND</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">ABOUT</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">PORTFOLIO</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">HOME</a></li>
+				<li class="nav__list-item"><a href="#brand" class="hover-target">BRAND</a></li>
+				<li class="nav__list-item"><a href="#about" class="hover-target">ABOUT</a></li>
+				<li class="nav__list-item"><a href="https://kangsinjae.github.io/KangSinJae/" class="hover-target">PORTFOLIO</a></li>
 			</ul>
 		</div>
 	</div>		
@@ -67,7 +67,7 @@
 	<div class='cursor3' id="cursor3"></div>
 
 <!-- header-txt -->
-  <div class="header-txt">
+  <div class="header-txt" id="#home">
     <div class="header-txt-container">
       <h1>WORLD OF COCA-COLA</h1>
       <div class="header-txt-wrap">
@@ -84,8 +84,8 @@
 <!-- home-txt -->
 <div class="home-container">
   <div class="home-img">
-    <img src=".//images/coca-gray.png" alt="코카콜라 회색">
-    <img src=".//images/coca-gray.png" alt="코카콜라 회색">
+    <img src="./images/coca-gray.png" alt="코카콜라 회색">
+    <img src="./images/coca-gray.png" alt="코카콜라 회색">
   </div>
   <div class="home-wrapper">
     <div class="home-inner-1">
@@ -121,7 +121,7 @@
           </ul>
           <span id="drink">DRINK</span>
           <span id="culture">CULTURE</span>
-          <a href="#">More</a>
+          <button class="pulse">More</button>
         </div>
         <img src="./images/brandimg.png" alt="브랜드이미지">
       </div>
@@ -178,7 +178,7 @@
     <!-- WE CREATE -->
     <div class="create-container">
       <div class="create-wrapper-1">
-        <div class="inner-txt">
+        <div class="inner-txt" id="brand">
           <p>WE CREATE</p>
           <p>BRAND</p>
         </div>
@@ -191,33 +191,43 @@
           <img src="./images/평창수.png" alt="평창수">
           <img src="./images/환타.png" alt="환타">
           <img src="./images/씨그램.png" alt="씨그램">
-          <img src="./images/태양의마테차.png" alt="태양의마테차">
-          <img src="./images/써니텐.png" alt="써니텐">
+          <img src="./images/파워에이드.png" alt="태양의마테차">
+          <img src="./images/비타민워터.png" alt="비타민워터">
+          <img src="./images/토레타.png" alt="토레타">
           <img src="./images/슈웹스.png" alt="슈웹스">
-          <img src="./images/코코팜.png" alt="코코팜">
         </div>
       </div>
       
       <div class="create-wrapper-2 mySwiper swiper">
         <div class="create-inner swiper-wrapper">
           <div class="create-inner-box swiper-slide">
-            <img src="./images/코카제로.jpg" alt="코카제로이미지">
+            <div class="img-box">
+              <img src="./images/코카제로.jpg" alt="코카제로이미지">
+            </div>
             <h3>COCA-COLA ZERO</h3>
           </div>
           <div class="create-inner-box swiper-slide">
+            <div class="img-box">
             <img src="./images/스프라이트제로.jpg" alt="스프라이트이미지">
+            </div>
             <h3>SPRITE ZERO</h3>
           </div>
           <div class="create-inner-box swiper-slide">
+            <div class="img-box">
             <img src="./images/환타이미지.jpg" alt="환타이미지">
+            </div>
             <h3>FANTA</h3>
           </div>
           <div class="create-inner-box swiper-slide">
+            <div class="img-box">
             <img src="./images/토레타이미지.jpeg" alt="토레타이미지">
+            </div>
             <h3>TORETA</h3>
           </div>
           <div class="create-inner-box swiper-slide">
+            <div class="img-box">
             <img src="./images/몬스터.jfif" alt="몬스터이미지">
+            </div>
             <h3>MONSTER ENERGY</h3>
           </div>
         </div>
@@ -239,7 +249,7 @@
             <h3>1886년에 탄생한 코카-콜라의 비하인드 히스토리, 마케팅 비법 등<br>130여 년 역사 속 흥미로운 이야기들을 모았다.</h3>
           </li>
           <li>
-            <a href="#">More</a>
+            <button class="pulse">More</button>
           </li>
         </ul>
       </div>
@@ -256,7 +266,7 @@
             <h3>다양한 니즈를 고려한 20여 개 이상의 음료 브랜드와 제품군 제공</h3>
           </li>
           <li>
-            <a href="#">More</a>
+            <button class="pulse">More</button>
           </li>
         </ul>
       </div>
@@ -264,7 +274,7 @@
     </div>
 
     <!-- footer -->
-    <footer>
+    <footer id="about">
       <div class="footer-txt">
         <h1>LET'S TALK.</h1>
         <ul>
@@ -274,10 +284,10 @@
       </div>
 
       <div class="footer-icon">
-        <a href="#">PORTFOLIO</a>
-        <a href="#"><img src="./images/youtube.png" alt="유튜브"></a>
-        <a href="#"><img src="./images/instagram.png" alt="인스타그램"></a>
-        <a href="#"><img src="./images/twitter.png" alt="트위터"></a>
+        <a href="https://kangsinjae.github.io/KangSinJae/" class="pulse2">PORTFOLIO</a>
+        <a href="https://www.youtube.com/user/openhappinesskorea" class="pulse2" target="_blank"><img src="./images/youtube.png" alt="유튜브"></a>
+        <a href="https://www.instagram.com/coke.style/" class="pulse2" target="_blank"><img src="./images/instagram.png" alt="인스타그램"></a>
+        <a href="https://twitter.com/CocaCola_Korea" class="pulse2" target="_blank"><img src="./images/twitter.png" alt="트위터"></a>
       </div>
     </footer>
 </body>

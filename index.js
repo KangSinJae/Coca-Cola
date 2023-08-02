@@ -4,29 +4,50 @@
 
 
 (function($) { "use strict";
-	//Navigation
+  // Navigation
 
-	var app = function () {
-		var body = undefined;
-		var menu = undefined;
-		var menuItems = undefined;
-		var init = function init() {
-			body = document.querySelector('body');
-			menu = document.querySelector('.menu-icon');
-			menuItems = document.querySelectorAll('.nav__list-item');
-			applyListeners();
-		};
-		var applyListeners = function applyListeners() {
-			menu.addEventListener('click', function () {
-				return toggleClass(body, 'nav-active');
-			});
-		};
-		var toggleClass = function toggleClass(element, stringClass) {
-			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
-		};
-		init();
-	}();
-})(jQuery); 
+  var app = function() {
+    var body = undefined;
+    var menu = undefined;
+    var menuItems = undefined;
+    
+    var init = function init() {
+      body = document.querySelector('body');
+      menu = document.querySelector('.menu-icon');
+      menuItems = document.querySelectorAll('.nav__list-item');
+      applyListeners();
+      applyListeners2();
+    };
+
+    var applyListeners = function applyListeners() {
+      menu.addEventListener('click', function () {
+        return addClass(body, 'nav-active');
+      });
+    };
+
+    var applyListeners2 = function applyListeners2() {
+      for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].addEventListener('click', function () {
+          return removeClass(body, 'nav-active');
+        });
+      }
+    };
+
+    var addClass = function addClass(element, stringClass) {
+      if (element.classList.contains(stringClass))
+        element.classList.remove(stringClass);
+      else
+        element.classList.add(stringClass);
+    };
+
+    var removeClass = function removeClass(element, stringClass) {
+      element.classList.remove(stringClass);
+    };
+
+    init();
+  }();
+})(jQuery);
+
 
 
 
@@ -112,12 +133,5 @@ const swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
   // freeMode: true,
   spaceBetween: 30,
-
 });
-
-
-
-
-
-
 
